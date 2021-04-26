@@ -1,0 +1,11 @@
+name: iOSplayground
+
+settings:
+  DEVELOPMENT_TEAM: 67762NVFY8
+  PRODUCT_BUNDLE_IDENTIFIER: wakewakame.iOSplayground
+
+targets:
+  iOSplayground:
+    sources: iOSplayground
+    platform: iOS
+    type: application
