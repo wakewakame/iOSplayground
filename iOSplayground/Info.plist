@@ -2,15 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!--Info.plistの設定が反映されない場合はiOSを再起動することで解決できる場合がある-->
+
+	<!--カメラへのアクセス権限を得る-->
 	<!--
-		LSSupportsOpeningDocumentsInPlaceとUIFileSharingEnabledをTrueにすることで
-		ファイルアプリから/Documentsの内容を表示できる。
-		もしも設定が反映されない場合はiPhoneを再起動することで解決できる場合がある。
+	<key>NSCameraUsageDescription</key><string></string>
 	-->
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
-	<key>UIFileSharingEnabled</key>
-	<true/>
+
+	<!--ファイルアプリから/Documentsの内容を表示できるようにする-->
+	<key>LSSupportsOpeningDocumentsInPlace</key><true/>
+	<key>UIFileSharingEnabled</key><true/>
+
+	<!--以降はXcodeが生成したデフォルトの設定-->
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
