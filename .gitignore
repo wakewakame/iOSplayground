@@ -1,3 +1,6 @@
+# MacOS用
+.DS_Store
+
 # Xcode用
 *.xcodeproj
 /build
