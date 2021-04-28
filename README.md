@@ -30,6 +30,8 @@ xcodegen
 `DEVELOPMENT_TEAM`と`PRODUCT_BUNDLE_IDENTIFIER`が正しく設定されていないとアプリの署名に失敗します。
 `project.yml`を編集し、それぞれの変数に適切な値を設定してください。
 
+`DEVELOPMENT_TEAM`に設定する値が分からない場合は`docs`ディレクトリ内の`get_DEVELOPMENT_TEAM.sh`を実行することで確認できます。
+
 ## 原因2
 sshでログインしている場合などはアプリの署名に失敗することがあります。
 これは署名に用いる証明書へのアクセス権限がないためです。
