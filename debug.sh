@@ -121,7 +121,7 @@ fi
 
 # 残りの引数を処理する部分の奇妙なイディオムに関しては
 # https://stackoverflow.com/questions/7577052/bash-empty-array-expansion-with-set-u を確認のこと
-xcodebuild -project "${PROJECT:-iOSplayground.xcodeproj}" -destination "${DESTINATION}" -configuration "${CONFIGURATION:-Debug}"  ${buildarg[@]+"${buildarg[@]}"} &&
+xcodebuild -allowProvisioningUpdates -project "${PROJECT:-iOSplayground.xcodeproj}" -destination "${DESTINATION}" -configuration "${CONFIGURATION:-Debug}"  ${buildarg[@]+"${buildarg[@]}"} &&
     if which ios-deploy ; then
 	# 実機でのデバッグ実行
 	ios-deploy --bundle ./build/${CONFIGURATION:-Debug}-iphoneos/iOSplayground.app --debug --no-wifi
