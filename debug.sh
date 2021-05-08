@@ -124,7 +124,8 @@ fi
 xcodebuild -project "${PROJECT:-iOSplayground.xcodeproj}" -destination "${DESTINATION}" -configuration "${CONFIGURATION:-Debug}"  ${buildarg[@]+"${buildarg[@]}"} &&
     if which ios-deploy ; then
 	# 実機でのデバッグ実行
-	ios-deploy --bundle ./build/${CONFIGURATION:-Debug}-iphoneos/iOSplayground.app --debug --no-wifi
+	DESTINATION_ID=$(echo "$DESTINATION" | sed "s/^platform=iOS,id=//")
+	ios-deploy --bundle ./build/${CONFIGURATION:-Debug}-iphoneos/iOSplayground.app --debug --id $DESTINATION_ID
     else
 	echo "ios-deployがインストールされていないので、実機でのデバッグ実行は行いません"
     fi
